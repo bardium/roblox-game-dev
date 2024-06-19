@@ -1,3 +1,5 @@
+-- Gets all the humanoids in Workspace and then get the humanoid playing animation tracks into an array of asset ids
+
 local HttpService = game:GetService("HttpService")
 local Workspace = game:GetService("Workspace")
 local RunService = game:GetService("RunService")
