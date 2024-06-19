@@ -5,7 +5,7 @@ import puppeteer from "puppeteer";
 const ASSET_IDS = ["17237488394", "14840403674", "10414001254", "17240191081"];
 
 (async () => {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
 
   const assetObject = {};
