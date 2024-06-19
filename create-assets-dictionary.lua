@@ -1,4 +1,4 @@
--- Use MarketplaceService to grab product info for Roblox assets using their IDs from an array ASSET_IDS. Print out assetsDictionary as JSON.
+-- Use MarketplaceService to grab product info for Roblox assets using their IDs from an array ASSET_IDS. Print out productInfo as JSON.
 local HttpService = game:GetService("HttpService")
 local MarketPlaceService = game:GetService("MarketplaceService")
 
@@ -9,11 +9,11 @@ local ASSET_IDS = {
 	"17240191081",
 }
 
-local assetsDictionary = {}
+local productInfo = {}
 
 for _, assetId in ASSET_IDS do
-	local productInfo = MarketPlaceService:GetProductInfo(assetId)
-	assetsDictionary[assetId] = productInfo
+	local assetProductInfo = MarketPlaceService:GetProductInfo(assetId)
+	table.insert(productInfo, assetProductInfo)
 end
 
-print(HttpService:JSONEncode(assetsDictionary))
+print(HttpService:JSONEncode(productInfo))
