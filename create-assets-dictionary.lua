@@ -16,4 +16,8 @@ for _, assetId in ASSET_IDS do
 	table.insert(productInfo, assetProductInfo)
 end
 
-print(HttpService:JSONEncode(productInfo))
+local stringValue = Instance.new("StringValue", game.ServerStorage)
+stringValue.Name = "ProductInfo"
+
+stringValue.Text = HttpService:JSONEncode(productInfo)
+print(stringValue, stringValue:GetFullName())
