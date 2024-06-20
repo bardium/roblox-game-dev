@@ -11,7 +11,7 @@ local ASSET_IDS = {
 
 local productInfo = {}
 
-for _, assetId in ipairs(ASSET_IDS) do
+for _, assetId in ASSET_IDS do
 	local assetProductInfo = MarketPlaceService:GetProductInfo(assetId)
 	table.insert(productInfo, assetProductInfo)
 end
