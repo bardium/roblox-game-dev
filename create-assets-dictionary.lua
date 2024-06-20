@@ -11,13 +11,19 @@ local ASSET_IDS = {
 
 local productInfo = {}
 
-for _, assetId in ASSET_IDS do
+for _, assetId in ipairs(ASSET_IDS) do
 	local assetProductInfo = MarketPlaceService:GetProductInfo(assetId)
 	table.insert(productInfo, assetProductInfo)
 end
 
-local stringValue = Instance.new("StringValue", game.ServerStorage)
-stringValue.Name = "ProductInfo"
+local fullText = HttpService:JSONEncode(productInfo)
 
-stringValue.Value = HttpService:JSONEncode(productInfo)
-print(stringValue, stringValue:GetFullName())
+local maxStringLength = 100000
+local chunks = {}
+for i = 1, #fullText, maxStringLength do
+	table.insert(chunks, fullText:sub(i, i + maxStringLength - 1))
+end
+
+for _, chunk in chunks do
+    print(chunk)
+end
