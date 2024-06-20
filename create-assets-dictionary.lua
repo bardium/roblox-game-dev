@@ -19,5 +19,5 @@ end
 local stringValue = Instance.new("StringValue", game.ServerStorage)
 stringValue.Name = "ProductInfo"
 
-stringValue.Text = HttpService:JSONEncode(productInfo)
+stringValue.Value = HttpService:JSONEncode(productInfo)
 print(stringValue, stringValue:GetFullName())
