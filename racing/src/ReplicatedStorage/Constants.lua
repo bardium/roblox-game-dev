@@ -1,0 +1,23 @@
+local Constants = {
+	PLAYER_IN_RACE_TAG = "InRace",
+	PLAYER_LAP_ATTRIBUTE = "lap",
+	PLAYER_CHECKPOINT_ATTRIBUTE = "checkpoint",
+	PLAYER_LAST_PASSED_CHECKPOINT_ATTRIBUTE = "lastPassedCheckpoint",
+	PLAYER_LAST_LAP_STARTED_ATTRIBUTE = "lastLapStarted",
+	PLAYER_BEST_LAP_TIME_ATTRIBUTE = "bestLapTime",
+	PLAYER_TOTAL_TIME_ATTRIBUTE = "totalTime",
+	PLAYER_PLACE_ATTRIBUTE = "place",
+
+	NUMBER_OF_LAPS_ATTRIBUTE = "numberOfLaps",
+	MAX_TIME_BETWEEN_CHECKPOINTS_ATTRIBUTE = "maxTimeBetweenCheckpoints",
+	START_LINEUP_MAX_PLAYERS_ATTRIBUTE = "startLineupMaxPlayers",
+	START_LINEUP_PADDING_ATTRIBUTE = "startLineupPadding",
+	START_COUTNDOWN_ATTRIBUTE = "startCountdown",
+	MAX_PLAYERS_ATTRIBUTE = "maxPlayers",
+	MIN_PLAYERS_ATTRIBUTE = "minPlayers",
+	START_DELAY_ATTRIBUTE = "startDelay",
+	MANAGER_STATE_ATTRIBUTE = "managerState",
+	START_DELAY_COUNTDOWN_ATTRIBUTE = "_startDelayCountdown",
+}
+
+return Constants
